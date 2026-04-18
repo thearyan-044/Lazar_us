@@ -1,0 +1,378 @@
+/*
+=================================================================
+  SPOTIFY SECTION CSS — Terminal / VarunOS Style
+  File: spotify-section.css
+
+  Matches the aesthetic of:
+  https://celebrated-heliotrope-72a8a4.netlify.app/
+  Customised for: Aryan Joshi
+
+  ASSUMES: JetBrains Mono is already loaded (from loading-screen.css)
+  If used standalone, add:
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+=================================================================
+*/
+
+/* ══════════════════════════════════════════════════════════
+   SECTION VARIABLES  (override or extend from portfolio vars)
+══════════════════════════════════════════════════════════ */
+.sp-section {
+  --sp-green:      #39d353;
+  --sp-green-dim:  rgba(57,211,83,.5);
+  --sp-green-glow: rgba(57,211,83,.1);
+  --sp-amber:      #f0b429;
+  --sp-white:      #e8e8e4;
+  --sp-muted:      rgba(232,232,228,.42);
+  --sp-border:     rgba(255,255,255,.07);
+  --sp-bg-block:   rgba(255,255,255,.03);
+  --sp-font:       'JetBrains Mono', 'Courier New', monospace;
+  --sp-spotify:    #1DB954;     /* Spotify brand green */
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION WRAPPER
+══════════════════════════════════════════════════════════ */
+.sp-section {
+  font-family: var(--sp-font);
+  padding: 72px 60px;
+  border-top: 1px solid var(--sp-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Section header row ── */
+.sp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sp-process-label {
+  font-size: clamp(14px, 1.8vw, 17px);
+  font-weight: 700;
+  color: var(--sp-white);
+  letter-spacing: .5px;
+}
+.sp-process-label::before {
+  content: '— ';
+  color: var(--sp-green);
+}
+
+/* Status indicator */
+.sp-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--sp-muted);
+  letter-spacing: 1px;
+}
+.sp-status-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--sp-muted);
+  flex-shrink: 0;
+  transition: background .3s;
+}
+.sp-status-dot.live     { background: var(--sp-spotify); box-shadow: 0 0 6px var(--sp-spotify); animation: spPulse 2s ease-in-out infinite; }
+.sp-status-dot.offline  { background: #666; }
+.sp-status-dot.loading  { background: var(--sp-amber); }
+
+@keyframes spPulse {
+  0%,100% { box-shadow: 0 0 4px var(--sp-spotify); }
+  50%      { box-shadow: 0 0 12px var(--sp-spotify); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   BLOCKS (shared card style)
+══════════════════════════════════════════════════════════ */
+.sp-block {
+  background: var(--sp-bg-block);
+  border: 1px solid var(--sp-border);
+  padding: 28px 32px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .3s;
+}
+.sp-block::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--sp-spotify);
+  transition: width .5s ease;
+}
+.sp-block:hover::before { width: 100%; }
+.sp-block:hover { border-color: rgba(29,185,84,.2); }
+
+/* Block label (like section sub-heading) */
+.sp-block-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sp-green);
+  margin-bottom: 22px;
+}
+.sp-block-label::before { content: '› '; }
+
+/* ══════════════════════════════════════════════════════════
+   NOW PLAYING BLOCK
+══════════════════════════════════════════════════════════ */
+.sp-nowplaying {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* ── Album art ── */
+.sp-art-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.sp-art {
+  width: 88px; height: 88px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(29,185,84,.08);
+  border: 1px solid var(--sp-border);
+  flex-shrink: 0;
+}
+.sp-art-logo {
+  width: 100%; height: 100%;
+}
+.sp-art-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Spinning vinyl ring (shows when playing) */
+.sp-vinyl-ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(29,185,84,.3);
+  opacity: 0;
+  transition: opacity .4s;
+}
+.sp-vinyl-ring.spinning {
+  opacity: 1;
+  animation: spSpin 4s linear infinite;
+}
+@keyframes spSpin { to { transform: rotate(360deg); } }
+
+/* ── Equaliser bars ── */
+.sp-eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 16px;
+  opacity: 0;
+  transition: opacity .4s;
+}
+.sp-eq.active { opacity: 1; }
+
+.sp-eq-bar {
+  width: 3px;
+  background: var(--sp-spotify);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: none;
+}
+.sp-eq.active .sp-eq-bar:nth-child(1) { animation: spEq 0.8s ease-in-out infinite; height: 8px; }
+.sp-eq.active .sp-eq-bar:nth-child(2) { animation: spEq 0.6s ease-in-out infinite .15s; height: 14px; }
+.sp-eq.active .sp-eq-bar:nth-child(3) { animation: spEq 0.9s ease-in-out infinite .05s; height: 10px; }
+.sp-eq.active .sp-eq-bar:nth-child(4) { animation: spEq 0.7s ease-in-out infinite .2s;  height: 6px; }
+
+@keyframes spEq {
+  0%,100% { transform: scaleY(.3); }
+  50%      { transform: scaleY(1); }
+}
+
+/* ── Track info ── */
+.sp-track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  flex: 1;
+}
+.sp-track-name {
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 700;
+  color: var(--sp-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sp-track-artist {
+  font-size: 13px;
+  color: var(--sp-green);
+  font-weight: 500;
+}
+.sp-track-album {
+  font-size: 12px;
+  color: var(--sp-muted);
+}
+
+/* Progress bar */
+.sp-track-progress-wrap { margin-top: 12px; }
+.sp-track-progress-track {
+  height: 3px;
+  background: rgba(255,255,255,.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.sp-track-progress-bar {
+  height: 100%;
+  background: var(--sp-spotify);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 1s linear;
+}
+.sp-track-times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--sp-muted);
+}
+
+/* Open in Spotify link */
+.sp-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sp-spotify);
+  text-decoration: none;
+  transition: opacity .3s, gap .3s;
+}
+.sp-open-link:hover { opacity: .75; gap: 10px; }
+
+/* ══════════════════════════════════════════════════════════
+   TOP ARTISTS BLOCK
+══════════════════════════════════════════════════════════ */
+.sp-artists-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sp-artist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--sp-border);
+  transition: border-color .3s, background .3s;
+}
+.sp-artist-item:hover {
+  border-color: rgba(29,185,84,.25);
+  background: rgba(29,185,84,.04);
+}
+.sp-artist-rank {
+  font-size: 12px;
+  color: var(--sp-green-dim);
+  min-width: 22px;
+  font-weight: 700;
+}
+.sp-artist-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-white);
+  transition: color .3s;
+}
+.sp-artist-item:hover .sp-artist-name { color: var(--sp-spotify); }
+
+/* ══════════════════════════════════════════════════════════
+   PLAYLISTS BLOCK
+══════════════════════════════════════════════════════════ */
+.sp-playlist-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.sp-playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sp-border);
+}
+.sp-playlist-item:last-child { border-bottom: none; }
+
+.sp-playlist-icon {
+  font-size: 10px;
+  color: var(--sp-green-dim);
+  flex-shrink: 0;
+}
+.sp-playlist-name {
+  font-size: 13px;
+  color: var(--sp-white);
+  text-decoration: none;
+  flex: 1;
+  transition: color .3s;
+}
+.sp-playlist-name:hover { color: var(--sp-spotify); }
+
+.sp-playlist-tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sp-green-dim);
+  min-width: 48px;
+  text-align: right;
+}
+
+/* Profile link */
+.sp-profile-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sp-green);
+  text-decoration: none;
+  transition: color .3s, letter-spacing .3s;
+}
+.sp-profile-link:hover {
+  color: var(--sp-spotify);
+  letter-spacing: 3px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .sp-section { padding: 60px 32px; }
+}
+
+@media (max-width: 768px) {
+  .sp-section { padding: 48px 24px; }
+  .sp-nowplaying { flex-direction: column; gap: 18px; }
+  .sp-art-wrap { flex-direction: row; align-items: center; }
+  .sp-block { padding: 22px 20px; }
+}
+
+@media (max-width: 480px) {
+  .sp-section { padding: 40px 16px; }
+  .sp-header { flex-direction: column; align-items: flex-start; }
+  .sp-track-name { font-size: 16px; }
+}

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aryan Joshi — Builder of Ideas. Aggregator of Impact.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=".//index.css">
+  <link rel="stylesheet" href=".//loading.css">
+  <link rel="stylesheet" href=".//spot.css">
+  
+</head>
+<body>
+<body>
+
+  <!-- LOADING SCREEN START -->
+  <div id="ls-overlay">
+ 
+    <!-- Scanline texture layer -->
+    <div class="ls-scanlines" aria-hidden="true"></div>
+ 
+    <!-- Terminal window -->
+    <div class="ls-terminal" role="status" aria-live="polite" aria-label="Portfolio loading">
+ 
+      <!-- Terminal top bar -->
+      <div class="ls-topbar" aria-hidden="true">
+        <span class="ls-dot ls-dot--red"></span>
+        <span class="ls-dot ls-dot--yellow"></span>
+        <span class="ls-dot ls-dot--green"></span>
+        <span class="ls-topbar-title">aryan@portfolio ~ boot</span>
+      </div>
+ 
+      <!-- Terminal body -->
+      <div class="ls-body" id="ls-body" aria-hidden="true">
+ 
+        <div class="ls-line ls-line--os" id="ls-line-os">
+          <span class="ls-typed" id="ls-typed-os"></span>
+          <span class="ls-cursor" id="ls-cursor-loader"></span>
+        </div>
+ 
+        <div class="ls-boot-lines" id="ls-boot-lines" style="display:none;">
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">mounting processes</span>
+            <span class="ls-dots" id="ls-dots-1"></span>
+            <span class="ls-val" id="ls-val-1"></span>
+          </div>
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">memory allocation</span>
+            <span class="ls-dots" id="ls-dots-2"></span>
+            <span class="ls-val" id="ls-val-2"></span>
+          </div>
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">sleep mode</span>
+            <span class="ls-dots" id="ls-dots-3"></span>
+            <span class="ls-val" id="ls-val-3"></span>
+          </div>
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">loading personality</span>
+            <span class="ls-dots" id="ls-dots-4"></span>
+            <span class="ls-val" id="ls-val-4"></span>
+          </div>
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">strategic ambitions</span>
+            <span class="ls-dots" id="ls-dots-5"></span>
+            <span class="ls-val" id="ls-val-5"></span>
+          </div>
+ 
+          <div class="ls-line">
+            <span class="ls-prompt">›</span>
+            <span class="ls-key">calibrating impact</span>
+            <span class="ls-dots" id="ls-dots-6"></span>
+            <span class="ls-val" id="ls-val-6"></span>
+          </div>
+ 
+        </div>
+ 
+        <div class="ls-ready-block" id="ls-ready-block" style="display:none;">
+          <div class="ls-line ls-line--blank">&nbsp;</div>
+          <div class="ls-line ls-line--ready" id="ls-ready-text"></div>
+        </div>
+ 
+        <div class="ls-name-block" id="ls-name-block" style="display:none;">
+          <div class="ls-line ls-line--blank">&nbsp;</div>
+          <div class="ls-name-big">
+            <span class="ls-name-first">ARYAN</span>
+            <span class="ls-name-last">JOSHI</span>
+          </div>
+          <div class="ls-name-tagline">
+            builder of ideas &nbsp;·&nbsp; aggregator of impact
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <div class="ls-progress-wrap" aria-hidden="true">
+        <div class="ls-progress-track">
+          <div class="ls-progress-bar" id="ls-progress-bar"></div>
+        </div>
+        <span class="ls-progress-pct" id="ls-progress-pct">0%</span>
+      </div>
+ 
+    </div>
+ 
+    <div class="ls-flash" id="ls-flash" aria-hidden="true"></div>
+ 
+  </div>
+  <!-- LOADING SCREEN END -->
+
+  <div class="cursor" id="cursor"></div>
+
+
+
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">ARYAN<span>©</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/in/aryan-s-joshi/" target="_blank" class="nav-cta">Connect</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-badge">BBA @ IIM Bangalore &nbsp;·&nbsp; Entrepreneurship @ IVB</div>
+
+    <!-- Profile Photo -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ Co-Founder @ ECOVO &nbsp;|&nbsp; Product Strategist &nbsp;|&nbsp; Sustainability Strategist</p>
+      <h1 class="hero-title">
+        ARYAN<br><span class="outline">JOSHI</span>
+      </h1>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Get in Touch <span class="arrow"></span></a>
+      </div>
+      <div class="hero-bottom">
+        <p class="hero-desc">"Builder of Ideas. Aggregator of Impact." — Merging analytical rigor with creative thinking to build things that matter.</p>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">9<span>+</span></div>
+            <div class="hero-stat-label">IB Research Papers</div>
+          </div>
+    <div class="hero-rotate-badge">
+      <svg viewBox="0 0 100 100">
+        <defs><path id="circle-path" d="M 50,50 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"/></defs>
+        <text><textPath href="#circle-path" startOffset="0%">ECOVO ✦ IIM BANGALORE ✦ IVB ✦ IMPACT ✦</textPath></text>
+        <circle cx="50" cy="50" r="5" class="dot"/>
+      </svg>
+    </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">10<span>+</span></div>
+            <div class="hero-stat-label">MUN Conferences</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">18<span>yrs</span></div>
+            <div class="hero-stat-label">Multidisciplinary</div>
+          </div>
+        </div>
+        <div class="hero-scroll-line"><span>Scroll</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Entrepreneurship</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">EV Tech</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Sustainability</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Macroeconomics</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Product Strategy</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">MUN Leadership</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Social Impact</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">IB Research</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Entrepreneurship</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">EV Tech</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Sustainability</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Macroeconomics</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Product Strategy</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">MUN Leadership</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">Social Impact</span><span class="marquee-dot">✦</span>
+      <span class="marquee-item">IB Research</span><span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+    <section class="about-split" id="about">
+    <div class="about-visual reveal">
+      <div class="about-img-main-wrap">
+        <img src="https://lh3.google.com/u/0/d/1NRwVaf_7EYTQp_qfJ7xUjywLIwHGmJ2j=w1920-h927-iv1?auditContext=prefetch" alt="Aryan Joshi" class="about-img-main"/>
+        <div class="about-img-overlay"></div>
+      </div>
+      <div class="about-accent-box">
+        <div class="about-accent-stat">ECOVO</div>
+        <div class="about-accent-label">Founder-led EV Charging Aggregator</div>
+      </div>
+    </div>
+    <div class="about-text reveal reveal-delay-2">
+      <p class="section-label">✦ About Me</p>
+      <h2 class="about-heading">BUILDER<br>OF<br><span class="outline">IDEAS</span></h2>
+      <p class="about-body">Over the span of 18 years, I have immersed myself in a range of disciplines—from entrepreneurship and macroeconomics to stargazing and martial arts.</p>
+      <p class="about-body">With dual degrees in BBA from IIM Bangalore and Entrepreneurship from IVB, I lead ECOVO, a platform aiming to unify India's fragmented EV charging network.</p>
+      <p class="about-body">I believe in merging analytical rigor with creative thinking and building things that matter.</p>
+      <div class="about-features">
+        <div class="about-feature"><div class="about-feature-bullet"></div><div class="about-feature-text">Co-Founder @ ECOVO — EV Charging Aggregator</div></div>
+        <div class="about-feature"><div class="about-feature-bullet"></div><div class="about-feature-text">BBA @ IIM Bangalore &amp; Entrepreneurship @ IVB</div></div>
+        <div class="about-feature"><div class="about-feature-bullet"></div><div class="about-feature-text">Product Strategist &amp; Sustainability Strategist</div></div>
+        <div class="about-feature"><div class="about-feature-bullet"></div><div class="about-feature-text">Secretary General, 10+ MUN Conferences</div></div>
+      </div>
+      <div class="about-cta-row">
+        <a href="https://www.linkedin.com/in/aryan-s-joshi/" target="_blank" class="btn-primary">Connect on LinkedIn</a>
+        <a href="https://docs.google.com/document/d/1QS5fZ6_G7HNc6Ew4Z2vvwGxjHBXcaNVi/edit?usp=sharing&ouid=111576370952895030853&rtpof=true&sd=true" class="btn-outline">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="work-section" id="projects">
+    <div class="work-header reveal">
+      <div>
+        <p class="section-label">✦ What I've Built</p>
+        <h2 class="section-title" style="margin-bottom:0">MY<br><span class="outline">PROJECTS</span></h2>
+      </div>
+      <a href="#contact" class="btn-secondary">Collaborate <span class="arrow"></span></a>
+    </div>
+    <div class="work-projects">
+      <div class="project-row reveal">
+        <span class="project-num">01</span>
+        <div class="project-info"><span class="project-title">ECOVO</span><span class="project-subtitle">Founder-led EV Charging Aggregator</span></div>
+        <div class="project-tags"><span class="project-tag">Founder</span><span class="project-tag">EV Tech</span><span class="project-tag">Sustainability</span></div>
+        <span class="project-year">2024</span><span class="project-link">View →</span>
+      </div>
+      <div class="project-row reveal reveal-delay-1" style="cursor:pointer;" onclick="window.location.href='ecohaven.html'">
+        <span class="project-num">02</span>
+        <div class="project-info"><span class="project-title">EcoHaven</span><span class="project-subtitle">Refuge, Reimagined — Sustainable shelters from ocean plastic</span></div>
+        <div class="project-tags"><span class="project-tag">SDG</span><span class="project-tag">Innovation</span><span class="project-tag">Social Impact</span></div>
+        <span class="project-year">2024</span><span class="project-link">Explore →</span>
+      </div>
+      <div class="project-row reveal reveal-delay-2">
+        <span class="project-num">03</span>
+        <div class="project-info"><span class="project-title">Business Simulations at IVB</span><span class="project-subtitle">Cooking Startup, Fashion Industry Study, Enron Analysis</span></div>
+        <div class="project-tags"><span class="project-tag">Business Strategy</span><span class="project-tag">Market Analysis</span></div>
+        <span class="project-year">2023</span><span class="project-link">View →</span>
+      </div>
+    </div>
+    <div class="services-grid" style="margin-top:48px;">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4l14 7v10l-14 7L6 21V11z"/><path d="M20 4v24M6 11l14 7 14-7"/></svg>
+        <h3 class="service-name">ECOVO</h3>
+        <p class="service-desc">A comprehensive platform aiming to unify India's fragmented EV charging network, making electric vehicle adoption seamless and accessible.</p>
+        <div class="tag-row"><span class="project-tag">Founder</span><span class="project-tag">EV Tech</span><span class="project-tag">Sustainability</span></div>
+        <div class="service-arrow">View on LinkedIn →</div>
+      </div>
+      <a href="ecohaven.html" class="service-card service-card-link reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="20" r="14"/><path d="M14 20h12M20 14v12"/></svg>
+        <h3 class="service-name">EcoHaven</h3>
+        <p class="service-desc">Award-nominated SDG initiative — sustainable housing from recycled ocean plastic, addressing both environmental and humanitarian challenges.</p>
+        <div class="tag-row"><span class="project-tag">SDG</span><span class="project-tag">Innovation</span><span class="project-tag">Social Impact</span></div>
+        <div class="service-arrow">Explore Project →</div>
+      </a>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 30L14 14l8 10 6-8 6 14"/><circle cx="34" cy="10" r="3"/></svg>
+        <h3 class="service-name">Business Simulations @ IVB</h3>
+        <p class="service-desc">Comprehensive case studies and simulations — Cooking Startup, Fashion Industry Study, and Enron Analysis exploring various industries.</p>
+        <div class="tag-row"><span class="project-tag">Business Strategy</span><span class="project-tag">Market Analysis</span></div>
+        <div class="service-arrow">View Cases →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="process-section" id="research">
+    <p class="section-label reveal">✦ Academic Work</p>
+    <h2 class="section-title reveal">RESEARCH<br><span class="outline">EXPERIENCE</span></h2>
+    <div class="research-summary reveal">
+      <svg class="research-big-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="8" y="4" width="28" height="36" rx="3"/><path d="M14 14h16M14 20h16M14 26h10"/>
+        <circle cx="36" cy="36" r="8" fill="var(--black)" stroke="var(--gold)"/>
+        <path d="M33 36h6M36 33v6" stroke="var(--gold)" stroke-width="2"/>
+      </svg>
+      <h3 class="research-count">9 IB Research Papers</h3>
+      <p class="research-sub-text">Comprehensive research spanning economics, policy, and psychology</p>
+      <span class="research-focus-badge">Psychology Focus: Recency Bias &amp; Heuristics</span>
+    </div>
+    <div class="process-steps" style="margin-top:48px;">
+      <div class="process-step reveal"><div class="process-step-num">01</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><h3 class="process-step-title">FAME 2 EV Subsidies</h3><p class="process-step-desc">Analysis of India's Faster Adoption and Manufacturing of EVs scheme — policy impact and market implications.</p></div>
+      <div class="process-step reveal reveal-delay-1"><div class="process-step-num">02</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><path d="M3 17l4-8 4 5 3-4 4 7"/><circle cx="19" cy="5" r="2"/></svg><h3 class="process-step-title">Russia Macro Crisis</h3><p class="process-step-desc">Macroeconomic analysis of the Russian financial crisis — currency dynamics, sanctions impact, and recovery patterns.</p></div>
+      <div class="process-step reveal reveal-delay-2"><div class="process-step-num">03</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l5 3"/></svg><h3 class="process-step-title">India-EU Tariff Dispute</h3><p class="process-step-desc">Research into bilateral trade tensions between India and the EU — tariff structures and negotiation outcomes.</p></div>
+      <div class="process-step reveal reveal-delay-3"><div class="process-step-num">04</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><h3 class="process-step-title">Electricity Tariffs in India</h3><p class="process-step-desc">Deep dive into India's electricity tariff structure, cross-subsidy mechanisms, and implications for EV adoption.</p></div>
+    </div>
+    <div class="process-steps" style="margin-top:24px;">
+      <div class="process-step reveal"><div class="process-step-num">05</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg><h3 class="process-step-title">Recency Bias &amp; Heuristics</h3><p class="process-step-desc">Psychology-focused IB research exploring how recency bias shapes decision-making in financial and social contexts.</p></div>
+      <div class="process-step reveal reveal-delay-1 step-muted"><div class="process-step-num">+4</div><h3 class="process-step-title">More Research Papers</h3><p class="process-step-desc">Additional IB papers covering economics, policy, and social science — available on request.</p></div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <p class="section-label reveal">✦ Professional Background</p>
+  <h2 class="section-title reveal">WORK<br><span class="outline">EXPERIENCE</span></h2>
+  <div class="services-grid" style="grid-template-columns:1fr;">
+    <a href=".//a99.html" class="exp-link">
+      <div class="service-card exp-card reveal">
+        <div class="exp-logo-box">
+          <img src="https://lh3.google.com/u/0/d/1vxiBYzhsubt7etvPIQ7GYRtObxJ5RgLC=w1920-h927-iv1?auditContext=prefetch" alt="Artha 99 logo">
+        </div>
+        <div class="exp-body">
+          <h3 class="service-name" style="margin-bottom:4px;">Artha 99</h3>
+          <p class="exp-type">Venture Capital Fund</p>
+          <p class="exp-role">Research Analyst Intern &nbsp;·&nbsp; 2 Months</p>
+          <p class="service-desc" style="margin-top:16px;">Analyzed 70+ investment opportunities, built comprehensive databases, and contributed to market research in manufacturing, defense, and aerospace sectors.</p>
+        </div>
+        <div class="exp-year">2024</div>
+      </div>
+    </a>
+  </div>
+
+<a href=".//lo.html" class="expb-card reveal reveal-delay-1" aria-label="View Lo! Foods experience">
+      <div class="expb-logo expb-logo--lofoods">
+        <img src="https://lh3.google.com/u/0/d/1wkHVOfEJWKUEJO9gjVMMcTwjHbEfQnMX=w1920-h927-iv1?auditContext=prefetch" alt="LO! Foods Logo" width="48" height="48" rx="10" fill="#ffffff">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="#ffffff"/>
+          <!-- Hexagon outline -->
+          <polygon points="24,5 38,12.5 38,27.5 24,35 10,27.5 10,12.5"
+                   fill="none" stroke="#111111" stroke-width="2.2"/>
+          <!-- "LO" text -->
+          <text x="50%" y="24" dominant-baseline="middle" text-anchor="middle"
+                font-family="Syne,sans-serif" font-size="10" font-weight="800"
+                fill="#111111">LO</text>
+          <!-- "FOODS" sub-text -->
+          <text x="50%" y="33" dominant-baseline="middle" text-anchor="middle"
+                font-family="Syne,sans-serif" font-size="5.5" font-weight="600"
+                fill="#555555">FOODS</text>
+        </svg>
+      </div>
+ 
+      <div class="expb-body">
+        <div class="expb-top">
+          <div class="expb-info">
+            <h3 class="expb-name">Lo! Foods</h3>
+            <p class="expb-type">Food &amp; Beverage</p>
+            <p class="expb-role">Product &amp; Marketing Intern &nbsp;·&nbsp; Nov 2025 – Jan 2026</p>
+          </div>
+          <svg class="expb-arrow" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+        <p class="expb-desc">
+          Supported launch of 4 new F&amp;B products, launched 400+ ad campaigns on
+          Swiggy Instamart, and developed 100+ high-impact keywords to improve RoAS.
+        </p>
+      </div>
+    </a>
+
+    
+    <!-- ── Card 3 · SSO Cancer Hospital ── -->
+    <a href=".//sso.html" class="expb-card reveal reveal-delay-2" aria-label="View SSO Cancer Hospital experience">
+      <div class="expb-logo expb-logo--sso">  
+        <img src="https://lh3.google.com/u/0/d/16f56xmvDI6WegJkvyni7iAxoJ3YRngz1=w1920-h927-iv1?auditContext=prefetch" alt="SSO Logo" width="75" height="48" rx="10" fill="#ffffff">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="#ffffff"/>
+          <!-- "SS" in navy -->
+          <text x="3"  y="30" font-family="Syne,sans-serif" font-size="17"
+                font-weight="800" fill="#1a1a8c">SS</text>
+          <!-- "O" in red -->
+          <text x="29" y="30" font-family="Syne,sans-serif" font-size="17"
+                font-weight="800" fill="#e63012">O</text>
+          <!-- sub-label -->
+          <text x="3"  y="40" font-family="Syne,sans-serif" font-size="5.5"
+                font-weight="500" fill="#444444">Cancer Hospital</text>
+        </svg>
+      </div>
+ 
+      <div class="expb-body">
+        <div class="expb-top">
+          <div class="expb-info">
+            <h3 class="expb-name">SSO Cancer Hospital</h3>
+            <p class="expb-type">Healthcare</p>
+            <p class="expb-role">Digital Marketing &amp; Partnerships Intern &nbsp;·&nbsp; Feb 2026 – May 2026</p>
+          </div>
+          <svg class="expb-arrow" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+        <p class="expb-desc">
+          Led a team of 3 performance marketers, achieved Practo audit score of 4,
+          and secured a Justdial partnership to boost OPD leads and brand awareness.
+        </p>
+      </div>
+    </a>
+ 
+  </div><!-- /.expb-list -->
+</section><!-- /#experience -->
+
+  <!-- LEADERSHIP -->
+  <section class="testimonials-section" id="leadership">
+    <p class="section-label reveal">✦ Community &amp; Roles</p>
+    <h2 class="section-title reveal">LEADERSHIP<br><span class="outline">&amp; IMPACT</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <svg class="leader-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="rgba(180,148,80,.12)"/><path d="M14 22a6 6 0 1 1 12 0" stroke="var(--gold)" stroke-width="1.5" fill="none"/><circle cx="20" cy="14" r="4" stroke="var(--gold)" stroke-width="1.5"/><path d="M8 34c0-3.3 5.4-6 12-6s12 2.7 12 6" stroke="var(--gold)" stroke-width="1.5" fill="none"/></svg>
+        <h3 class="leader-title">MUN Leadership</h3><p class="leader-subtitle">Secretary General, 10+ conferences</p>
+        <p class="testimonial-text">Leading crisis negotiations and fostering diplomatic dialogue across international conferences.</p>
+        <span class="project-tag" style="margin-top:16px;display:inline-block;">Leadership &amp; Crisis Negotiation</span>
+      </div>
+<a href=".//interact.html" class="testimonial-link">
+  <div class="testimonial-card reveal reveal-delay-1">
+    <svg class="leader-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="rgba(180,148,80,.12)"/><circle cx="20" cy="20" r="10" stroke="var(--gold)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="var(--gold)" stroke-width="1.5"/><circle cx="20" cy="20" r="2" fill="var(--gold)"/></svg>
+    <h3 class="leader-title">Interact Club Treasurer</h3><p class="leader-subtitle">Raised ₹1 crore for solar grid</p>
+    <p class="testimonial-text">Successfully fundraised and implemented a solar grid project in Kanchipuram, impacting rural communities.</p>
+    <span class="project-tag" style="margin-top:16px;display:inline-block;">Sustainable Energy Access</span>
+  </div>
+</a>
+
+<a href=".//community.html" class="testimonial-link">
+  <div class="testimonial-card reveal reveal-delay-2">
+    <svg class="leader-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="rgba(255,255,255,.05)"/><path d="M20 28s-10-4.5-10-11a10 10 0 0 1 20 0c0 6.5-10 11-10 11z" stroke="var(--silver)" stroke-width="1.5" fill="none"/></svg>
+    <h3 class="leader-title">Community Initiatives</h3><p class="leader-subtitle">Basketball coaching, marathon events, art exhibitions</p>
+    <p class="testimonial-text">Basketball coaching for underprivileged girls, marathon event organization, and art exhibition logistics.</p>
+    <span class="project-tag" style="margin-top:16px;display:inline-block;">Social Impact &amp; Community Building</span>
+  </div>
+</a>
+</div>
+</section>
+
+  <!-- HOBBIES -->
+  <section class="process-section" id="hobbies">
+    <p class="section-label reveal">✦ Beyond Work</p>
+    <h2 class="section-title reveal">MY<br><span class="outline">HOBBIES</span></h2>
+    <div class="process-steps hobbies-grid">
+      <div class="process-step reveal"><div class="process-step-num">01</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M14.5 17.5l2 2a2.83 2.83 0 0 0 4-4l-2-2M14.5 17.5l-5 5"/></svg><h3 class="process-step-title">Martial Arts</h3><p class="process-step-desc">Black belt in Karate.</p><div class="tag-row"><span class="project-tag">Discipline</span><span class="project-tag">Physical Fitness</span></div></div>
+      <div class="process-step reveal reveal-delay-1"><div class="process-step-num">02</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><circle cx="12" cy="5" r="3"/><path d="M5 20v-4a7 7 0 0 1 14 0v4"/></svg><h3 class="process-step-title">Basketball</h3><p class="process-step-desc">District level player.</p><div class="tag-row"><span class="project-tag">Teamwork</span><span class="project-tag">Competition</span></div></div>
+      <div class="process-step reveal reveal-delay-2"><div class="process-step-num">03</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" class="step-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><h3 class="process-step-title">Stargazing</h3><p class="process-step-desc">Meteor shower logs since 6th grade.</p><div class="tag-row"><span class="project-tag">Astronomy</span><span class="project-tag">Patience</span></div></div>
+      <div class="process-step reveal"><div class="process-step-num">04</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><circle cx="5" cy="12" r="3"/><circle cx="19" cy="12" r="3"/><path d="M8 12h8M5 9V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/></svg><h3 class="process-step-title">Cycling</h3><p class="process-step-desc">Long-distance — Chennai to Pondicherry.</p><div class="tag-row"><span class="project-tag">Endurance</span><span class="project-tag">Adventure</span></div></div>
+      <div class="process-step reveal reveal-delay-1"><div class="process-step-num">05</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" class="step-icon"><path d="M3 20h18M5 20V9l7-6 7 6v11"/><path d="M10 20v-5h4v5"/></svg><h3 class="process-step-title">Theatre</h3><p class="process-step-desc">Krea Shakti Award-winning play.</p><div class="tag-row"><span class="project-tag">Creativity</span><span class="project-tag">Performance</span></div></div>
+      <div class="process-step reveal reveal-delay-2"><div class="process-step-num">06</div><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" class="step-icon"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"/></svg><h3 class="process-step-title">Speech &amp; Drama</h3><p class="process-step-desc">Trinity College London certification.</p><div class="tag-row"><span class="project-tag">Communication</span><span class="project-tag">Public Speaking</span></div></div>
+    </div>
+  </section>
+
+<!-- ═══ SPOTIFY SECTION ═══ -->
+<section class="sp-section" id="spotify">
+
+  <!-- Section header — terminal process label -->
+  <div class="sp-header">
+    <span class="sp-process-label">spotify.process</span>
+    <span class="sp-status" id="sp-status">
+      <span class="sp-status-dot" id="sp-status-dot"></span>
+      <span class="sp-status-text" id="sp-status-text">connecting...</span>
+    </span>
+  </div>
+
+  <!-- ── NOW PLAYING ── -->
+  <div class="sp-block sp-nowplaying-block">
+    <div class="sp-block-label">currently playing</div>
+
+    <div class="sp-nowplaying" id="sp-nowplaying">
+
+      <!-- Album art -->
+      <div class="sp-art-wrap">
+        <div class="sp-art" id="sp-art">
+          <!-- Default: Spotify green logo when nothing playing -->
+          <svg viewBox="0 0 48 48" fill="none" class="sp-art-logo" id="sp-art-logo">
+            <circle cx="24" cy="24" r="24" fill="#1DB954"/>
+            <path d="M33 29.5c-4.5-2.75-10-3-14.5-1.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M34.5 24.5c-5.5-3.5-12.5-3.5-17.5-1" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M36 19.5C29.5 15.5 21 16 15.5 19" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <img src="" alt="Album art" class="sp-art-img" id="sp-art-img" style="display:none;"/>
+          <!-- Spinning vinyl ring when playing -->
+          <div class="sp-vinyl-ring" id="sp-vinyl-ring"></div>
+        </div>
+        <!-- Equaliser bars (animated when playing) -->
+        <div class="sp-eq" id="sp-eq" aria-hidden="true">
+          <span class="sp-eq-bar"></span>
+          <span class="sp-eq-bar"></span>
+          <span class="sp-eq-bar"></span>
+          <span class="sp-eq-bar"></span>
+        </div>
+      </div>
+
+      <!-- Track info -->
+      <div class="sp-track-info">
+        <div class="sp-track-name" id="sp-track-name">—</div>
+        <div class="sp-track-artist" id="sp-track-artist">not playing</div>
+        <div class="sp-track-album" id="sp-track-album"></div>
+
+        <!-- Progress bar -->
+        <div class="sp-track-progress-wrap" id="sp-track-progress-wrap" style="display:none;">
+          <div class="sp-track-progress-track">
+            <div class="sp-track-progress-bar" id="sp-track-progress-bar"></div>
+          </div>
+          <div class="sp-track-times">
+            <span id="sp-time-current">0:00</span>
+            <span id="sp-time-total">0:00</span>
+          </div>
+        </div>
+
+        <!-- Open in Spotify link -->
+        <a href="https://open.spotify.com/user/31tkfbg7r6axawov4zvodmgn7k7m?si=9e29d322e9e2405f"
+           class="sp-open-link" id="sp-open-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="13" height="13">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.75.75 0 1 1-.432-1.435c2.826-.855 7.523-.69 10.492 1.07a.75.75 0 0 1-.766 1.291z"/>
+          </svg>
+          open in spotify
+        </a>
+      </div>
+
+    </div><!-- /.sp-nowplaying -->
+  </div>
+
+  <!-- ── TOP ARTISTS ── -->
+  <div class="sp-block sp-artists-block">
+    <div class="sp-block-label">top artists · on repeat</div>
+    <ul class="sp-artists-list" id="sp-artists-list">
+      <!-- Static fallback (matches VarunOS style) — JS replaces when API live -->
+      <li class="sp-artist-item">
+        <span class="sp-artist-rank">01</span>
+        <span class="sp-artist-name" id="sp-artist-1">J. Cole</span>
+      </li>
+      <li class="sp-artist-item">
+        <span class="sp-artist-rank">02</span>
+        <span class="sp-artist-name" id="sp-artist-2">Seedhe Maut</span>
+      </li>
+      <li class="sp-artist-item">
+        <span class="sp-artist-rank">03</span>
+        <span class="sp-artist-name" id="sp-artist-3">Kanye West</span>
+      </li>
+      <li class="sp-artist-item">
+        <span class="sp-artist-rank">04</span>
+        <span class="sp-artist-name" id="sp-artist-4">Drake</span>
+      </li>
+      <li class="sp-artist-item">
+        <span class="sp-artist-rank">05</span>
+        <span class="sp-artist-name" id="sp-artist-5">Divine</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── PLAYLISTS ── -->
+  <div class="sp-block sp-playlists-block">
+    <div class="sp-block-label">playlists · on rotation</div>
+    <ul class="sp-playlist-list" id="sp-playlist-list">
+      <!-- Static fallback playlists — JS replaces with real data when API live -->
+      <li class="sp-playlist-item">
+        <span class="sp-playlist-icon">▶</span>
+        <a href="https://open.spotify.com/user/31tkfbg7r6axawov4zvodmgn7k7m"
+           class="sp-playlist-name" target="_blank" rel="noopener">
+          focus.playlist — deep work mode
+        </a>
+        <span class="sp-playlist-tag">active</span>
+      </li>
+      <li class="sp-playlist-item">
+        <span class="sp-playlist-icon">▶</span>
+        <a href="https://open.spotify.com/user/31tkfbg7r6axawov4zvodmgn7k7m"
+           class="sp-playlist-name" target="_blank" rel="noopener">
+          midnight.builds — late night grind
+        </a>
+        <span class="sp-playlist-tag">queued</span>
+      </li>
+      <li class="sp-playlist-item">
+        <span class="sp-playlist-icon">▶</span>
+        <a href="https://open.spotify.com/user/31tkfbg7r6axawov4zvodmgn7k7m"
+           class="sp-playlist-name" target="_blank" rel="noopener">
+          desi.rap — seedhe maut &amp; divine
+        </a>
+        <span class="sp-playlist-tag">—</span>
+      </li>
+    </ul>
+
+    <!-- Profile link -->
+    <a href="https://open.spotify.com/user/31tkfbg7r6axawov4zvodmgn7k7m?si=9e29d322e9e2405f"
+       class="sp-profile-link" target="_blank" rel="noopener">
+      view full profile →
+    </a>
+  </div>
+
+</section><!-- /#spotify -->
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <p class="cta-label reveal">✦ Let's Build Something Amazing Together</p>
+    <h2 class="cta-title reveal">GET<br><span class="outline">IN</span><br>TOUCH</h2>
+    <div class="cta-actions reveal">
+      <a href="https://www.linkedin.com/in/aryan-s-joshi/" target="_blank" class="btn-primary">Connect on LinkedIn</a>
+      <a href="https://docs.google.com/document/d/1QS5fZ6_G7HNc6Ew4Z2vvwGxjHBXcaNVi/edit?usp=sharing&ouid=111576370952895030853&rtpof=true&sd=true" class="btn-outline">Download CV</a>
+      <a href="mailto:aryanjoshi@email.com" class="btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">ARYAN<span>©</span></div>
+        <p class="footer-brand-desc">"Builder of Ideas. Aggregator of Impact."<br>Co-Founder @ ECOVO | BBA @ IIM Bangalore | Entrepreneurship @ IVB</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/aryan-s-joshi/" target="_blank" class="footer-social">in</a>
+          <a href="#" class="footer-social">ig</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">About Me</a></li><li><a href="#projects">Projects</a></li>
+          <li><a href="#research">Research</a></li><li><a href="#experience">Work Experience</a></li>
+          <li><a href="#leadership">Leadership &amp; Impact</a></li><li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Projects</p>
+        <ul class="footer-links">
+          <li><a href="#">ECOVO</a></li>
+          <li><a href=".//ecohaven.html">EcoHaven</a></li>
+          <li><a href="#">Business Simulations @ IVB</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Connect</p>
+        <ul class="footer-links">
+          <li><a href="https://www.linkedin.com/in/aryan-s-joshi/" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:josharyanjr@gmai.com">Email</a></li>
+          <li><a href="#">Bangalore, India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 <span>Aryan Joshi</span>. All rights reserved.</p>
+      <p class="footer-copy">"Builder of Ideas. Aggregator of Impact."</p>
+    </div>
+  </footer>
+  <script src=".//spot.js" defer></script>
+  <script src=".//loading.js" defer></script>
+  <script src=".//index.js" defer></script>
+</body>
+</html>
